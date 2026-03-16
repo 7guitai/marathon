@@ -4,17 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>大阪マラソン完全ガイド｜基本情報・難易度・初心者向け解説</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ナビゲーション -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">⚡</span>
+        <span>MARATHON GUIDE</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#info">基本情報</a></li>
+        <li><a href="#difficulty">難易度</a></li>
+        <li><a href="#beginner">初心者向け</a></li>
+        <li><a href="#features">特徴</a></li>
+        <li><a href="#summary" class="nav__cta">まとめ</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- モバイルメニュー -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#info">基本情報</a></li>
+      <li><a href="#difficulty">難易度</a></li>
+      <li><a href="#beginner">初心者向け</a></li>
+      <li><a href="#features">特徴</a></li>
+      <li><a href="#summary">まとめ</a></li>
+    </ul>
+  </div>
+
   <!-- ヒーロー -->
   <header class="hero">
+    <div class="hero__bg">
+      <div class="hero__lines"></div>
+    </div>
     <div class="hero__inner">
-      <p class="hero__label">大会解説</p>
-      <h1 class="hero__title">大阪マラソン<br><span>完全ガイド</span></h1>
-      <p class="hero__meta">開催地：大阪府｜距離：42.195km｜毎年10月〜11月開催</p>
-      <a href="#summary" class="btn btn--primary">まとめを見る</a>
+      <div class="hero__badge reveal">大会解説ガイド</div>
+      <h1 class="hero__title reveal">
+        <span class="hero__title-en">OSAKA</span>
+        <span class="hero__title-ja">大阪マラソン</span>
+        <span class="hero__title-sub">完全ガイド 2024</span>
+      </h1>
+      <p class="hero__desc reveal">日本屈指の市民マラソン。大阪の街を駆け抜ける42.195kmの感動を、あなたへ。</p>
+      <div class="hero__stats reveal">
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="30000">0</span>
+          <span class="hero__stat-unit">名</span>
+          <span class="hero__stat-label">参加定員</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">42</span>
+          <span class="hero__stat-unit">.195km</span>
+          <span class="hero__stat-label">総距離</span>
+        </div>
+        <div class="hero__stat-divider"></div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-count="7">0</span>
+          <span class="hero__stat-unit">時間</span>
+          <span class="hero__stat-label">制限時間</span>
+        </div>
+      </div>
+      <div class="hero__actions reveal">
+        <a href="#info" class="btn btn--primary">詳細を見る</a>
+        <a href="#summary" class="btn btn--ghost">まとめへ</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>SCROLL</span>
+      <div class="hero__scroll-line"></div>
     </div>
   </header>
 
@@ -23,80 +90,132 @@
     <!-- 基本情報 -->
     <section class="section" id="info">
       <div class="container">
-        <h2 class="section__title"><span>基本情報</span></h2>
+        <div class="section__head reveal">
+          <p class="section__label">INFORMATION</p>
+          <h2 class="section__title">基本情報</h2>
+          <p class="section__desc">大会参加に必要な基本データをまとめました。</p>
+        </div>
         <div class="info-grid">
-          <div class="info-card">
-            <div class="info-card__icon">📅</div>
-            <div class="info-card__label">開催時期</div>
-            <div class="info-card__value">毎年10月〜11月</div>
+          <div class="info-card reveal">
+            <div class="info-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </div>
+            <div class="info-card__body">
+              <p class="info-card__label">開催時期</p>
+              <p class="info-card__value">毎年10月〜11月</p>
+            </div>
           </div>
-          <div class="info-card">
-            <div class="info-card__icon">📍</div>
-            <div class="info-card__label">スタート地点</div>
-            <div class="info-card__value">大阪城公園周辺</div>
+          <div class="info-card reveal">
+            <div class="info-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="info-card__body">
+              <p class="info-card__label">スタート地点</p>
+              <p class="info-card__value">大阪城公園周辺</p>
+            </div>
           </div>
-          <div class="info-card">
-            <div class="info-card__icon">🏁</div>
-            <div class="info-card__label">ゴール地点</div>
-            <div class="info-card__value">インテックス大阪</div>
+          <div class="info-card reveal">
+            <div class="info-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <div class="info-card__body">
+              <p class="info-card__label">ゴール地点</p>
+              <p class="info-card__value">インテックス大阪</p>
+            </div>
           </div>
-          <div class="info-card">
-            <div class="info-card__icon">👥</div>
-            <div class="info-card__label">定員</div>
-            <div class="info-card__value">約30,000人</div>
+          <div class="info-card reveal">
+            <div class="info-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div class="info-card__body">
+              <p class="info-card__label">定員</p>
+              <p class="info-card__value">約30,000名</p>
+            </div>
           </div>
-          <div class="info-card">
-            <div class="info-card__icon">⏱️</div>
-            <div class="info-card__label">制限時間</div>
-            <div class="info-card__value">7時間</div>
+          <div class="info-card reveal">
+            <div class="info-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="info-card__body">
+              <p class="info-card__label">制限時間</p>
+              <p class="info-card__value">7時間</p>
+            </div>
           </div>
-          <div class="info-card">
-            <div class="info-card__icon">💴</div>
-            <div class="info-card__label">参加費</div>
-            <div class="info-card__value">約15,000円（一般）</div>
+          <div class="info-card reveal">
+            <div class="info-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div class="info-card__body">
+              <p class="info-card__label">参加費</p>
+              <p class="info-card__value">約15,000円</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- 難易度 -->
-    <section class="section section--gray" id="difficulty">
+    <section class="section section--dark" id="difficulty">
       <div class="container">
-        <h2 class="section__title"><span>難易度</span></h2>
-        <div class="difficulty">
-          <div class="difficulty__score">
-            <div class="score-circle">
-              <span class="score-circle__num">3</span>
-              <span class="score-circle__denom">/5</span>
-            </div>
-            <p class="difficulty__label">中級者向け</p>
-          </div>
-          <div class="difficulty__bars">
-            <div class="bar-item">
-              <span class="bar-item__label">コース難度</span>
-              <div class="bar-item__track">
-                <div class="bar-item__fill" style="width: 50%"></div>
+        <div class="section__head reveal">
+          <p class="section__label">DIFFICULTY</p>
+          <h2 class="section__title">難易度</h2>
+          <p class="section__desc">コースや条件ごとに難易度を数値化しました。</p>
+        </div>
+        <div class="difficulty reveal">
+          <div class="difficulty__left">
+            <div class="gauge">
+              <svg class="gauge__svg" viewBox="0 0 200 200">
+                <circle class="gauge__bg" cx="100" cy="100" r="80" fill="none" stroke-width="14"/>
+                <circle class="gauge__fill" cx="100" cy="100" r="80" fill="none" stroke-width="14"
+                  stroke-dasharray="502" stroke-dashoffset="502" data-target="301"/>
+              </svg>
+              <div class="gauge__center">
+                <span class="gauge__num">3</span>
+                <span class="gauge__label">/ 5</span>
               </div>
-              <span class="bar-item__note">フラット中心</span>
             </div>
-            <div class="bar-item">
-              <span class="bar-item__label">気候条件</span>
+            <p class="difficulty__rating">中級者向け</p>
+            <p class="difficulty__note">初心者でも挑戦可能なレベル</p>
+          </div>
+          <div class="difficulty__right">
+            <div class="bar-item reveal">
+              <div class="bar-item__head">
+                <span class="bar-item__label">コース難度</span>
+                <span class="bar-item__pct">50%</span>
+              </div>
               <div class="bar-item__track">
-                <div class="bar-item__fill" style="width: 55%"></div>
+                <div class="bar-item__fill" data-width="50"></div>
+              </div>
+              <span class="bar-item__note">フラット中心のコース設計</span>
+            </div>
+            <div class="bar-item reveal">
+              <div class="bar-item__head">
+                <span class="bar-item__label">気候条件</span>
+                <span class="bar-item__pct">55%</span>
+              </div>
+              <div class="bar-item__track">
+                <div class="bar-item__fill" data-width="55"></div>
               </div>
               <span class="bar-item__note">秋開催でやや暑い場合あり</span>
             </div>
-            <div class="bar-item">
-              <span class="bar-item__label">混雑度</span>
+            <div class="bar-item reveal">
+              <div class="bar-item__head">
+                <span class="bar-item__label">混雑度</span>
+                <span class="bar-item__pct">80%</span>
+              </div>
               <div class="bar-item__track">
-                <div class="bar-item__fill" style="width: 80%"></div>
+                <div class="bar-item__fill" data-width="80"></div>
               </div>
               <span class="bar-item__note">大規模大会のため混雑あり</span>
             </div>
-            <div class="bar-item">
-              <span class="bar-item__label">倍率</span>
+            <div class="bar-item reveal">
+              <div class="bar-item__head">
+                <span class="bar-item__label">抽選倍率</span>
+                <span class="bar-item__pct">70%</span>
+              </div>
               <div class="bar-item__track">
-                <div class="bar-item__fill" style="width: 70%"></div>
+                <div class="bar-item__fill" data-width="70"></div>
               </div>
               <span class="bar-item__note">抽選制で競争率高め</span>
             </div>
@@ -108,44 +227,62 @@
     <!-- 初心者おすすめ度 -->
     <section class="section" id="beginner">
       <div class="container">
-        <h2 class="section__title"><span>初心者おすすめ度</span></h2>
-        <div class="beginner">
-          <div class="stars">
-            <span class="star filled">★</span>
-            <span class="star filled">★</span>
-            <span class="star filled">★</span>
-            <span class="star filled">★</span>
-            <span class="star">★</span>
-            <span class="stars__label">4.0 / 5.0</span>
+        <div class="section__head reveal">
+          <p class="section__label">FOR BEGINNERS</p>
+          <h2 class="section__title">初心者おすすめ度</h2>
+          <p class="section__desc">初めてのフルマラソンにどれだけ適しているかを評価しました。</p>
+        </div>
+        <div class="beginner reveal">
+          <div class="rating">
+            <div class="rating__stars">
+              <span class="star active">★</span>
+              <span class="star active">★</span>
+              <span class="star active">★</span>
+              <span class="star active">★</span>
+              <span class="star">★</span>
+            </div>
+            <div class="rating__score">
+              <span class="rating__num">4.0</span>
+              <span class="rating__denom">/ 5.0</span>
+            </div>
+            <p class="rating__verdict">初心者に<strong>おすすめ</strong>の大会</p>
           </div>
-          <div class="beginner__points">
-            <div class="point point--good">
-              <div class="point__icon">✓</div>
-              <div class="point__text">
-                <strong>7時間の制限時間</strong>
-                <p>初心者でも完走を目指しやすいゆとりある設定。歩いても完走可能なペース。</p>
-              </div>
+        </div>
+        <div class="points">
+          <div class="point point--good reveal">
+            <div class="point__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <div class="point point--good">
-              <div class="point__icon">✓</div>
-              <div class="point__text">
-                <strong>フラットなコース設計</strong>
-                <p>大阪市内を走るコースは起伏が少なく、初心者でも走りやすい。</p>
-              </div>
+            <div class="point__body">
+              <h3>7時間の制限時間</h3>
+              <p>初心者でも完走を目指しやすいゆとりある設定。歩いても完走可能なペース配分が可能です。</p>
             </div>
-            <div class="point point--good">
-              <div class="point__icon">✓</div>
-              <div class="point__text">
-                <strong>充実したエイドステーション</strong>
-                <p>コース上に多数の給水・給食スポットあり。沿道の応援も非常に多い。</p>
-              </div>
+          </div>
+          <div class="point point--good reveal">
+            <div class="point__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-            <div class="point point--caution">
-              <div class="point__icon">!</div>
-              <div class="point__text">
-                <strong>開催時期の気温に注意</strong>
-                <p>10〜11月は気温が高めになることも。暑さ対策が必要な場合がある。</p>
-              </div>
+            <div class="point__body">
+              <h3>フラットなコース設計</h3>
+              <p>大阪市内を走るコースは起伏が少なく、足への負担が少ない。初心者でもペースを崩しにくい。</p>
+            </div>
+          </div>
+          <div class="point point--good reveal">
+            <div class="point__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="point__body">
+              <h3>充実したエイドステーション</h3>
+              <p>コース上に多数の給水・給食スポットあり。ボランティアによる手厚いサポートも好評です。</p>
+            </div>
+          </div>
+          <div class="point point--caution reveal">
+            <div class="point__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+            </div>
+            <div class="point__body">
+              <h3>開催時期の気温に注意</h3>
+              <p>10〜11月は気温が高めになることも。適切な暑さ対策と水分補給のプランニングが必要です。</p>
             </div>
           </div>
         </div>
@@ -153,27 +290,43 @@
     </section>
 
     <!-- 特徴 -->
-    <section class="section section--gray" id="features">
+    <section class="section section--accent" id="features">
       <div class="container">
-        <h2 class="section__title"><span>大会の特徴</span></h2>
+        <div class="section__head reveal">
+          <p class="section__label">FEATURES</p>
+          <h2 class="section__title">大会の特徴</h2>
+          <p class="section__desc">大阪マラソンならではの魅力を4つのポイントでご紹介します。</p>
+        </div>
         <div class="features">
-          <div class="feature-card">
+          <div class="feature-card reveal">
             <div class="feature-card__num">01</div>
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
             <h3 class="feature-card__title">大阪の名所を巡るコース</h3>
             <p class="feature-card__text">大阪城・道頓堀・通天閣など、大阪を代表する観光スポットを走り抜けます。関西ならではの活気ある雰囲気を感じながら42kmを完走できます。</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card reveal">
             <div class="feature-card__num">02</div>
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
             <h3 class="feature-card__title">ランナーファーストの運営</h3>
             <p class="feature-card__text">荷物預かり・更衣室・シャワーなど設備が充実。ボランティアスタッフも多く、初参加でも安心して大会に臨めます。</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card reveal">
             <div class="feature-card__num">03</div>
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </div>
             <h3 class="feature-card__title">熱狂的な沿道応援</h3>
             <p class="feature-card__text">大阪市民の温かくユニークな応援がランナーを後押し。沿道の観客数は100万人を超えることもあり、盛り上がりは最高峰です。</p>
           </div>
-          <div class="feature-card">
+          <div class="feature-card reveal">
             <div class="feature-card__num">04</div>
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            </div>
             <h3 class="feature-card__title">豊富な給食メニュー</h3>
             <p class="feature-card__text">たこ焼き・肉まんなど大阪グルメが給食として提供されることも。食を楽しみながら走れるのも大阪マラソンならではの魅力です。</p>
           </div>
@@ -184,30 +337,48 @@
     <!-- まとめ -->
     <section class="section" id="summary">
       <div class="container">
-        <h2 class="section__title"><span>まとめ</span></h2>
-        <div class="summary">
-          <p class="summary__lead">大阪マラソンは、<strong>初心者から上級者まで楽しめる日本屈指の市民マラソン</strong>です。</p>
-          <div class="summary__table">
-            <div class="summary__row">
-              <span class="summary__key">こんな人におすすめ</span>
-              <span class="summary__val">初フルマラソンに挑戦したい方・大阪観光と組み合わせたい方・にぎやかな雰囲気で走りたい方</span>
+        <div class="section__head reveal">
+          <p class="section__label">SUMMARY</p>
+          <h2 class="section__title">まとめ</h2>
+          <p class="section__desc">大阪マラソンに関するすべての情報を総括します。</p>
+        </div>
+        <div class="summary-card reveal">
+          <p class="summary-card__lead">大阪マラソンは、<strong>初心者から上級者まで楽しめる日本屈指の市民マラソン</strong>です。豊かなエンタメ性・充実したサポート体制・大阪グルメと、完走以外の楽しみ方も豊富な大会です。</p>
+          <div class="summary-table">
+            <div class="summary-row reveal">
+              <div class="summary-row__key">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                こんな人におすすめ
+              </div>
+              <div class="summary-row__val">初フルマラソンに挑戦したい方・大阪観光と組み合わせたい方・にぎやかな雰囲気で走りたい方</div>
             </div>
-            <div class="summary__row">
-              <span class="summary__key">目標タイム目安</span>
-              <span class="summary__val">初心者：5時間30分〜7時間　中級者：4時間〜5時間30分</span>
+            <div class="summary-row reveal">
+              <div class="summary-row__key">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                目標タイム目安
+              </div>
+              <div class="summary-row__val">初心者：5時間30分〜7時間　／　中級者：4時間〜5時間30分</div>
             </div>
-            <div class="summary__row">
-              <span class="summary__key">注意点</span>
-              <span class="summary__val">抽選制のため早めにエントリー準備を。気温が高い年もあるため暑さ対策も忘れずに。</span>
+            <div class="summary-row reveal">
+              <div class="summary-row__key">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                注意点
+              </div>
+              <div class="summary-row__val">抽選制のため早めにエントリー準備を。気温が高い年もあるため暑さ対策も忘れずに。</div>
             </div>
-            <div class="summary__row">
-              <span class="summary__key">総合評価</span>
-              <span class="summary__val">★★★★☆　エンタメ性・サポート体制ともに国内トップクラスの大会</span>
+            <div class="summary-row reveal">
+              <div class="summary-row__key">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                総合評価
+              </div>
+              <div class="summary-row__val">
+                <span class="inline-stars">★★★★☆</span>　エンタメ性・サポート体制ともに国内トップクラスの大会
+              </div>
             </div>
           </div>
-          <div class="summary__cta">
-            <p>まずは公式サイトでエントリー情報をチェック！</p>
-            <a href="#" class="btn btn--primary">公式サイトを確認する</a>
+          <div class="summary-cta reveal">
+            <p>エントリー受付は毎年春〜夏ごろ開始。見逃さずにチェックを！</p>
+            <a href="#" class="btn btn--primary btn--lg">公式サイトでエントリー情報を確認する</a>
           </div>
         </div>
       </div>
@@ -217,9 +388,17 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="footer__text">マラソン大会解説メディア｜全国の大会情報をわかりやすくお届けします</p>
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="nav__logo-icon">⚡</span>
+          <span>MARATHON GUIDE</span>
+        </div>
+        <p class="footer__copy">全国のマラソン大会を解説するWebメディア。大会ごとの基本情報・難易度・初心者向けポイントをわかりやすくお届けします。</p>
+        <p class="footer__note">※ 掲載情報は調査時点のものです。最新情報は各大会の公式サイトをご確認ください。</p>
+      </div>
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
